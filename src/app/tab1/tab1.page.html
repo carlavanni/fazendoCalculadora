@@ -1,17 +1,40 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color = "warning">
     <ion-title>
-      Tab 1
+      Básica
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
-</ion-content>
+  <ion-content [fullscreen]="true">
+    <ion-item>
+      <ion-label>Digite o primeiro número:</ion-label>
+      <ion-input type ="number" [(ngModel)]="primeirovalor"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Digite o segundo número:</ion-label>
+      <ion-input type="number" [(ngModel)]="segundovalor"></ion-input>
+    </ion-item>
+
+     <ion-button expand="block" (click)="situacao()" color = "medium">Somar</ion-button>
+     <p><strong> RESULTADO DA SOMA: </strong> {{resultadoS}}</p>
+
+    <ion-button expand="block" (click)="situ()" color = "medium">Subtrair</ion-button>
+    <p><strong> RESULTADO DA SUBTRAÇÃO: </strong> {{resultadoSub}}</p>
+
+    <ion-button expand="block" (click)="result()" color = "medium">Dividir</ion-button>
+    <p><strong> RESULTADO DA DIVISÃO: </strong> {{resultadoD}}</p>
+
+    <ion-button expand="block" (click)="resultado()" color = "medium">Multiplicar</ion-button>
+    <p><strong> RESULTADO DA MULTIPLICAÇÃO: </strong> {{resultadoM}}</p>
+    
+<br>
+    <ion-button expand="block" (click)="exnum()" color= "dark">Limpar</ion-button>
+    <p> {{num}}</p>
+
+  </ion-content>
+  
+  
+
